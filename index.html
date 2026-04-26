@@ -26,6 +26,8 @@
         class="container mx-auto px-6 h-20 flex items-center justify-between"
       >
         <div class="text-xl font-bold tracking-tight">Kauã Neres</div>
+        
+        <!-- Desktop Menu -->
         <ul
           class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-muted"
         >
@@ -55,13 +57,67 @@
             >
           </li>
         </ul>
-        <a
-          class="px-5 py-2 bg-brand-accent/10 border border-brand-accent/30 text-brand-accent rounded-lg text-sm font-semibold hover:bg-brand-accent hover:text-white transition-all duration-300"
-          href="https://www.linkedin.com/in/kauã-neres"
+        
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden flex flex-col gap-1.5 focus:outline-none"
+          aria-label="Toggle menu"
         >
-          Resume
-        </a>
+          <span class="w-6 h-0.5 bg-white block transition-all"></span>
+          <span class="w-6 h-0.5 bg-white block transition-all"></span>
+          <span class="w-6 h-0.5 bg-white block transition-all"></span>
+        </button>
       </nav>
+      
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="fixed top-20 left-0 right-0 bg-brand-dark/95 backdrop-blur-md border-b border-white/5 hidden md:hidden max-h-[calc(100vh-80px)] overflow-y-auto"
+      >
+        <ul class="flex flex-col text-sm font-medium text-brand-muted divide-y divide-white/5">
+          <li>
+            <a
+              class="block px-6 py-4 hover:text-white hover:bg-white/5 transition-colors"
+              href="#about"
+              onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              class="block px-6 py-4 hover:text-white hover:bg-white/5 transition-colors"
+              href="#stacks"
+              onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+              >Stacks</a
+            >
+          </li>
+          <li>
+            <a
+              class="block px-6 py-4 hover:text-white hover:bg-white/5 transition-colors"
+              href="#experience"
+              onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a
+              class="block px-6 py-4 hover:text-white hover:bg-white/5 transition-colors"
+              href="#projects"
+              onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              class="block px-6 py-4 hover:text-white hover:bg-white/5 transition-colors"
+              href="#contact"
+              onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
     </header>
     <!-- END: MainHeader -->
     <main class="pt-20">
