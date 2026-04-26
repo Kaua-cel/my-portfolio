@@ -2,6 +2,9 @@ body {
   background-color: #05080a;
   color: #ffffff;
 }
+html {
+  scroll-behavior: smooth;
+}
 .gradient-border {
   position: relative;
   background: #0b1218;
