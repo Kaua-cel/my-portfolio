@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -648,50 +649,68 @@
           </div>
           <div class="lg:w-1/2">
             <form
+              id="contact-form"
               class="space-y-6 bg-brand-dark/40 p-8 rounded-2xl border border-white/5"
-              action="mailto:kauaneres.dev@gmail.com"
-              method="post"
-              enctype="text/plain"
               data-purpose="contact-form"
             >
               <div class="space-y-2">
                 <label
+                  for="contact-name"
                   class="text-[10px] uppercase tracking-widest font-bold text-brand-muted"
                   >Full Name</label
                 >
                 <input
-                  class="w-full bg-brand-dark border-white/10 rounded-lg py-3 focus:ring-brand-accent focus:border-brand-accent text-sm text-white"
+                  id="contact-name"
+                  name="user_name"
+                  class="w-full bg-brand-dark border border-white/10 rounded-lg py-3 px-4 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent text-sm text-white placeholder-brand-muted transition-all"
                   placeholder="John Doe"
                   type="text"
+                  required
+                  minlength="2"
                 />
+                <p id="name-error" class="text-red-400 text-xs hidden">Nome deve ter no mínimo 2 caracteres</p>
               </div>
               <div class="space-y-2">
                 <label
+                  for="contact-email"
                   class="text-[10px] uppercase tracking-widest font-bold text-brand-muted"
                   >Email Address</label
                 >
                 <input
-                  class="w-full bg-brand-dark border-white/10 rounded-lg py-3 focus:ring-brand-accent focus:border-brand-accent text-sm text-white"
+                  id="contact-email"
+                  name="user_email"
+                  class="w-full bg-brand-dark border border-white/10 rounded-lg py-3 px-4 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent text-sm text-white placeholder-brand-muted transition-all"
                   placeholder="john@example.com"
                   type="email"
+                  required
                 />
+                <p id="email-error" class="text-red-400 text-xs hidden">Email inválido</p>
               </div>
               <div class="space-y-2">
                 <label
+                  for="contact-message"
                   class="text-[10px] uppercase tracking-widest font-bold text-brand-muted"
                   >Message</label
                 >
                 <textarea
-                  class="w-full bg-brand-dark border-white/10 rounded-lg py-3 focus:ring-brand-accent focus:border-brand-accent text-sm text-white"
+                  id="contact-message"
+                  name="message"
+                  class="w-full bg-brand-dark border border-white/10 rounded-lg py-3 px-4 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent text-sm text-white placeholder-brand-muted transition-all resize-none"
                   placeholder="Tell me about your project..."
                   rows="4"
+                  required
+                  minlength="10"
                 ></textarea>
+                <p id="message-error" class="text-red-400 text-xs hidden">Mensagem deve ter no mínimo 10 caracteres</p>
               </div>
               <button
-                class="w-full py-4 bg-brand-accent hover:bg-blue-600 text-white font-bold rounded-lg transition-all shadow-lg shadow-brand-accent/20"
+                type="submit"
+                id="submit-btn"
+                class="w-full py-4 bg-brand-accent hover:bg-blue-600 text-white font-bold rounded-lg transition-all shadow-lg shadow-brand-accent/20 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Send Message
               </button>
+              <p id="form-message" class="text-center text-sm hidden"></p>
             </form>
           </div>
         </div>
