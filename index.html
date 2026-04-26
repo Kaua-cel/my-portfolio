@@ -13,7 +13,14 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"></script>
-    <script src="script.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    
     <link rel="stylesheet" href="style.css" />
   </head>
   <body
@@ -649,6 +656,7 @@
           </div>
           <div class="lg:w-1/2">
             <form
+              method="post"
               id="contact-form"
               class="space-y-6 bg-brand-dark/40 p-8 rounded-2xl border border-white/5"
               data-purpose="contact-form"
@@ -753,6 +761,9 @@
         </div>
       </div>
     </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./scripts/script.js"></script>
     <!-- END: Footer -->
   </body>
 </html>
